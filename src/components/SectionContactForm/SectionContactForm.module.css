@@ -5,33 +5,23 @@
     
     @media screen and (max-width: 767.8px){
         padding: 10px 0px 0px 0px;
-        width: 100%;
     }
 }
 
-
 .label{
     display: flex;
-    flex-direction: column;
- 
+    flex-direction: column; 
 }
 .label .name{
-    margin-bottom: 20px;
-
     @media screen and (max-width: 499.8px){
-        margin-bottom: 10px;
         width: 100%;
     }
 }
 .label .number{
-    margin-bottom: 30px;
-    
     @media screen and (max-width: 499.8px){
-        margin-bottom: 20px;
         width: 100%;
     }
 }
-
 .name, .number{
     padding: 5px 25px 5px 10px;
 
@@ -39,6 +29,17 @@
         width: calc(100% - 35px);
     }
 }
+.massage{
+    margin-bottom: 20px;
+    font-size: 10px;
+    color: grey;
+}
+.label .massage{
+    @media screen and (max-width: 767.9px){
+        margin-bottom: 10px;
+    }
+}
+
 .visually-hidden{ 
     width: 1px;
     height: 1px;
@@ -50,22 +51,22 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
-  .btn{
-    font-size: 16px;;
-    font-weight: 500;
-    padding: 5px 10px;
-    border: none;
-    color: white;
-    background-color:rgb(203, 163, 111);
+.btn{
+font-size: 16px;;
+font-weight: 500;
+padding: 5px 10px;
+border: none;
+color: white;
+background-color:rgb(203, 163, 111);
 
-    &:hover, &:focus{
-        box-shadow: 1px 1px 1px grey;
-    }
+&:hover, &:focus{
+    box-shadow: 1px 1px 1px grey;
+}
 
-    @media screen and (max-width: 767.8px){
-        margin-bottom: 40px;
-    }
-    @media screen and (max-width: 499.8px){
-        margin-bottom: 20px;
-    }
-  }
+@media screen and (max-width: 767.8px){
+    margin-bottom: 40px;
+}
+@media screen and (max-width: 499.8px){
+    margin-bottom: 20px;
+}
+}

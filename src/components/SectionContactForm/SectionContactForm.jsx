@@ -34,7 +34,7 @@ export class SectionContactForm extends Component{
                     <h2 className={css["visually-hidden"]}>Form for adding new contacts</h2>
                     <form className={css.form} onSubmit={onSubmitHandle} >
 
-                        <label className={css.label}>Name
+                        <label className={css.label} aria-label="Person name input">Name
                             <input  className={css.name}
                                     id="name" 
                                     type="text" 
@@ -42,13 +42,14 @@ export class SectionContactForm extends Component{
                                     value={name} 
                                     required 
                                     autoComplete="off" 
-                                    placeholder="contact name & sername"
-                                    pattern="^[a-zA-Z]{2,50}$"
+                                    placeholder="Name/Sername"
+                                    pattern="^([a-zA-Z][ ]*){2,50}$"
                                     onChange={onChangeFormInput}
                             />
+                            <p className={css.massage}>Name must be 2-50 chars long and contain only latin letters and whitespaces</p>
                         </label>
 
-                        <label className={css.label}>Phone
+                        <label className={css.label} aria-label="Phone number input">Phone
                             <input  className={css.number}
                                     id="number"
                                     type="tel"
@@ -56,13 +57,14 @@ export class SectionContactForm extends Component{
                                     value={number}
                                     required
                                     autoComplete="off"
-                                    placeholder="xxx-xxx-xx-xx"
+                                    placeholder="xxx xxx xx xx"
                                     pattern="^([0-9][ ]*){8,20}$"
                                     onChange={onChangeFormInput}
                             />
+                           <p className={css.massage}>Phone number must be 8-20 chars long and contain only digits and whitespaces</p>
                         </label>
 
-                        <button className={css.btn} type="submit">Add contact</button>
+                        <button className={css.btn} type="submit" aria-label="Add contact">Add contact</button>
 
                     </form>
                 </section>

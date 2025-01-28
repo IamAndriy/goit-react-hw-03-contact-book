@@ -63,7 +63,9 @@ export class App extends Component {
 
         
         const {contacts} = this.state;
+        const {name, number} = contacts.find(item => item.id === id);
         this.setState({contacts : contacts.filter(item => item.id !== id)});
+        toast(`The contact <${name} , ${number} > is deleted from the book`);
     }
 
     render (){
