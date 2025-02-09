@@ -26,7 +26,7 @@ import css from "./App.module.css";
 //     {id: 'id-19', name: 'Hermione Kline56', number: '443-89-12'},
 //     {id: 'id-20', name: 'Eden Clements56',  number: '645-17-79'},];
 
-// localStorage.setItem("CONTACTS", JSON.stringify(contacts));
+// window.localStorage.setItem("CONTACTS", JSON.stringify(contacts));
 
 const key = "CONTACTS";
 
@@ -80,7 +80,7 @@ export class App extends Component {
     componentDidUpdate = (prevProps, prevState) => {
         const {contacts} = this.state;
         if (contacts !== prevState.contacts){
-            localStorage.setItem(key, JSON.stringify(contacts));
+            window.localStorage.setItem(key, JSON.stringify(contacts));
         }
     }
 
