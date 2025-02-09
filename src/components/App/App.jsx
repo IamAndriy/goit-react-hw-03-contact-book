@@ -4,6 +4,7 @@ import { nanoid } from "nanoid";
 import { SectionContactForm } from "../SectionContactForm/SectionContactForm";
 import { SectionContacts } from "../SectionContacts/SectionContacts";
 import css from "./App.module.css";
+import PropTypes from "prop-types";
 
 // const contacts = [{id: 'id-1', name: 'Rosie Simpson',  number: '459-12-56'},
 //     {id: 'id-2', name: 'Hermione Kline', number: '443-89-12'},
@@ -113,3 +114,7 @@ export class App extends Component {
     }
 }
 
+App.propTypes = {
+    contacts : PropTypes.arrayOf(PropTypes.object), 
+    filter: PropTypes.string,
+}

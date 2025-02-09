@@ -1,5 +1,6 @@
 import { Component } from "react";
 import css from "./SectionContactForm.module.css";
+import PropTypes from "prop-types";
 
 const initialState={
     name: "",
@@ -70,4 +71,10 @@ export class SectionContactForm extends Component{
                 </section>
                 
     }
+}
+
+SectionContactForm.propTypes = {
+    name: PropTypes.string,
+    number: PropTypes.string,
+    onAdd: PropTypes.func,
 }

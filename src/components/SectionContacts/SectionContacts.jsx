@@ -2,6 +2,8 @@ import { Component } from "react";
 import {Filter} from "../Filter/Filter";
 import {ContactList} from "../ContactList/ContactList";
 import css from "./SectionContacts.module.css";
+import PropTypes from "prop-types";
+
 
 export class SectionContacts extends Component{
 
@@ -21,4 +23,11 @@ export class SectionContacts extends Component{
                     }
                 </section>
     }
+}
+
+SectionContacts.propTypes = {
+    contacts: PropTypes.arrayOf(PropTypes.object),
+    filter: PropTypes.string,
+    onChange: PropTypes.func,
+    onDelContact: PropTypes.func,
 }

@@ -2,6 +2,7 @@ import { Component } from "react";
 import css from "./ContactList.module.css";
 import {ContactItem} from "../ContactItem/ContactItem";
 import { nanoid } from "nanoid";
+import PropTypes from "prop-types";
 
 export class ContactList extends Component{
 
@@ -20,4 +21,9 @@ export class ContactList extends Component{
                 </ul>
                 
     }
+}
+
+ContactList.propTypes = {
+    contacts : PropTypes.arrayOf(PropTypes.object),
+    onDelContact: PropTypes.func,
 }
